@@ -13,7 +13,7 @@
 ActiveRecord::Schema.define(version: 2021_08_14_073454) do
 
   create_table "borderlines", charset: "utf8mb4", collation: "utf8mb4_0900_ai_ci", force: :cascade do |t|
-    t.bigint "nursery_school_id", null: false
+    t.integer "nursery_school_code", null: false
     t.integer "zero"
     t.boolean "zero_priority_order"
     t.integer "one"
@@ -30,11 +30,11 @@ ActiveRecord::Schema.define(version: 2021_08_14_073454) do
     t.boolean "latest", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
-    t.index ["nursery_school_id"], name: "index_borderlines_on_nursery_school_id"
+    t.index ["nursery_school_code"], name: "fk_rails_24a128611c"
   end
 
   create_table "capacities", charset: "utf8mb4", collation: "utf8mb4_0900_ai_ci", force: :cascade do |t|
-    t.bigint "nursery_school_id", null: false
+    t.integer "nursery_school_code", null: false
     t.integer "zero"
     t.integer "one"
     t.integer "two"
@@ -43,11 +43,10 @@ ActiveRecord::Schema.define(version: 2021_08_14_073454) do
     t.integer "five"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
-    t.index ["nursery_school_id"], name: "index_capacities_on_nursery_school_id", unique: true
+    t.index ["nursery_school_code"], name: "fk_rails_e9fb57912b"
   end
 
-  create_table "nursery_schools", charset: "utf8mb4", collation: "utf8mb4_0900_ai_ci", force: :cascade do |t|
-    t.integer "code", null: false
+  create_table "nursery_schools", primary_key: "code", id: :integer, charset: "utf8mb4", collation: "utf8mb4_0900_ai_ci", force: :cascade do |t|
     t.string "name", null: false
     t.string "address", null: false
     t.string "phone_number", null: false
@@ -59,6 +58,6 @@ ActiveRecord::Schema.define(version: 2021_08_14_073454) do
     t.datetime "updated_at", precision: 6, null: false
   end
 
-  add_foreign_key "borderlines", "nursery_schools"
-  add_foreign_key "capacities", "nursery_schools"
+  add_foreign_key "borderlines", "nursery_schools", column: "nursery_school_code", primary_key: "code"
+  add_foreign_key "capacities", "nursery_schools", column: "nursery_school_code", primary_key: "code"
 end

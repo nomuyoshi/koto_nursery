@@ -1,7 +1,7 @@
 class CreateCapacities < ActiveRecord::Migration[6.1]
   def change
     create_table :capacities do |t|
-      t.belongs_to :nursery_school, null: false, foreign_key: true, index: { unique: true }
+      t.integer :nursery_school_code, null: false
       t.integer :zero
       t.integer :one
       t.integer :two
@@ -11,5 +11,7 @@ class CreateCapacities < ActiveRecord::Migration[6.1]
 
       t.timestamps
     end
+
+    add_foreign_key :capacities, :nursery_schools, column: :nursery_school_code , primary_key: :code
   end
 end
