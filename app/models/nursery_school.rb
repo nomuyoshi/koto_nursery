@@ -37,4 +37,6 @@ class NurserySchool < ApplicationRecord
 
   has_many :borderlines
   has_one :capacity
+
+  geocoded_by :address
 end
