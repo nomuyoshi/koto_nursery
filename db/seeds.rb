@@ -5,3 +5,10 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+require "csv"
+file = File.join(Rails.root, "db", "seeds", "nursery_schools.csv")
+csv = CSV.read(file)
+header = csv.first
+data = csv[1..]
+attrs = data.map { |row| header.zip(row).to_h }
+NurserySchool.upsert_all(attrs)
