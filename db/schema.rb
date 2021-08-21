@@ -49,8 +49,8 @@ ActiveRecord::Schema.define(version: 2021_08_21_150941) do
   create_table "nursery_schools", primary_key: "code", id: :integer, charset: "utf8mb4", collation: "utf8mb4_0900_ai_ci", force: :cascade do |t|
     t.string "name", null: false
     t.string "address", null: false
-    t.decimal "longitude", precision: 10
-    t.decimal "latitude", precision: 10
+    t.decimal "longitude", precision: 13, scale: 10
+    t.decimal "latitude", precision: 13, scale: 10
     t.string "phone_number", null: false
     t.integer "kind", default: 0, null: false
     t.integer "min_acceptable_age_type", null: false
