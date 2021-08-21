@@ -9,7 +9,8 @@ class CreateCapacities < ActiveRecord::Migration[6.1]
       t.integer :four
       t.integer :five
 
-      t.timestamps
+      t.datetime :created_at, null: false, default: ->{ "CURRENT_TIMESTAMP" }
+      t.datetime :updated_at, null: false, default: ->{ "CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP" }
     end
 
     add_foreign_key :capacities, :nursery_schools, column: :nursery_school_code , primary_key: :code

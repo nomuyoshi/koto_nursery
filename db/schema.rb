@@ -28,8 +28,8 @@ ActiveRecord::Schema.define(version: 2021_08_14_073454) do
     t.boolean "five_priority_order"
     t.integer "year", null: false
     t.boolean "latest", null: false
-    t.datetime "created_at", precision: 6, null: false
-    t.datetime "updated_at", precision: 6, null: false
+    t.datetime "created_at", default: -> { "CURRENT_TIMESTAMP" }, null: false
+    t.datetime "updated_at", default: -> { "CURRENT_TIMESTAMP" }, null: false
     t.index ["nursery_school_code"], name: "fk_rails_24a128611c"
   end
 
@@ -41,8 +41,8 @@ ActiveRecord::Schema.define(version: 2021_08_14_073454) do
     t.integer "three"
     t.integer "four"
     t.integer "five"
-    t.datetime "created_at", precision: 6, null: false
-    t.datetime "updated_at", precision: 6, null: false
+    t.datetime "created_at", default: -> { "CURRENT_TIMESTAMP" }, null: false
+    t.datetime "updated_at", default: -> { "CURRENT_TIMESTAMP" }, null: false
     t.index ["nursery_school_code"], name: "fk_rails_e9fb57912b"
   end
 
@@ -53,9 +53,10 @@ ActiveRecord::Schema.define(version: 2021_08_14_073454) do
     t.integer "kind", default: 0, null: false
     t.integer "min_acceptable_age_type", null: false
     t.integer "opening_type", null: false
-    t.string "access"
-    t.datetime "created_at", precision: 6, null: false
-    t.datetime "updated_at", precision: 6, null: false
+    t.integer "overtime_condition_type"
+    t.text "url"
+    t.datetime "created_at", default: -> { "CURRENT_TIMESTAMP" }, null: false
+    t.datetime "updated_at", default: -> { "CURRENT_TIMESTAMP" }, null: false
   end
 
   add_foreign_key "borderlines", "nursery_schools", column: "nursery_school_code", primary_key: "code"

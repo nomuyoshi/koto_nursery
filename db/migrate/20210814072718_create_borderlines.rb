@@ -17,7 +17,8 @@ class CreateBorderlines < ActiveRecord::Migration[6.1]
       t.integer :year, null: false
       t.boolean :latest, null: false
 
-      t.timestamps
+      t.datetime :created_at, null: false, default: ->{ "CURRENT_TIMESTAMP" }
+      t.datetime :updated_at, null: false, default: ->{ "CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP" }
     end
 
     add_foreign_key :borderlines, :nursery_schools, column: :nursery_school_code , primary_key: :code
