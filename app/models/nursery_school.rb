@@ -38,6 +38,7 @@ class NurserySchool < ApplicationRecord
   has_many :borderlines
   has_one :capacity
 
+  geocoded_by :address
   def self.search(kinds, min_age_types, address, km)
     result = self.all
     result = result.where(kind: kinds) if kinds.present?
