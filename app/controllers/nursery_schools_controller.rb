@@ -1,7 +1,7 @@
 class NurserySchoolsController < ApplicationController
   # GET /nursery_schools
   def index
-    @nursery_schools = NurserySchool.all
+    @nursery_schools = NurserySchool.search(params[:kinds], params[:min_age_types], params[:address], params[:km])
 
     render json: @nursery_schools
   end

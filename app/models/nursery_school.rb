@@ -39,4 +39,12 @@ class NurserySchool < ApplicationRecord
   has_one :capacity
 
   geocoded_by :address
+  def self.search(kinds, min_age_types, address, km)
+    result = self.all
+    result = result.where(kind: kinds) if kinds.present?
+    result = result.where(min_acceptable_age_type: min_age_types) if min_age_types.present?
+    result = result.near(address, km, unit: :km) if address.present? && km.present?
+
+    result
+  end
 end
