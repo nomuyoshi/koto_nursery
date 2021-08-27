@@ -10,40 +10,27 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_08_27_011539) do
+ActiveRecord::Schema.define(version: 2021_08_27_013918) do
 
   create_table "borderlines", charset: "utf8mb4", collation: "utf8mb4_0900_ai_ci", force: :cascade do |t|
-    t.integer "nursery_school_code", null: false
-    t.integer "zero"
-    t.boolean "zero_priority_order"
-    t.integer "one"
-    t.boolean "one_priority_order"
-    t.integer "two"
-    t.boolean "two_priority_order"
-    t.integer "three"
-    t.boolean "three_priority_order"
-    t.integer "four"
-    t.boolean "four_priority_order"
-    t.integer "five"
-    t.boolean "five_priority_order"
+    t.integer "nursery_code", null: false
+    t.integer "age", null: false
+    t.boolean "priority_order", null: false
+    t.integer "point"
     t.integer "year", null: false
-    t.boolean "latest", null: false
     t.datetime "created_at", default: -> { "CURRENT_TIMESTAMP" }, null: false
     t.datetime "updated_at", default: -> { "CURRENT_TIMESTAMP" }, null: false
-    t.index ["nursery_school_code"], name: "fk_rails_24a128611c"
+    t.index ["nursery_code"], name: "fk_rails_874ec6e2c5"
   end
 
   create_table "capacities", charset: "utf8mb4", collation: "utf8mb4_0900_ai_ci", force: :cascade do |t|
-    t.integer "nursery_school_code", null: false
-    t.integer "zero"
-    t.integer "one"
-    t.integer "two"
-    t.integer "three"
-    t.integer "four"
-    t.integer "five"
+    t.integer "nursery_code", null: false
+    t.integer "age", null: false
+    t.integer "max_number", null: false
     t.datetime "created_at", default: -> { "CURRENT_TIMESTAMP" }, null: false
     t.datetime "updated_at", default: -> { "CURRENT_TIMESTAMP" }, null: false
-    t.index ["nursery_school_code"], name: "fk_rails_e9fb57912b"
+    t.index ["age", "nursery_code"], name: "index_capacities_on_age_and_nursery_code", unique: true
+    t.index ["nursery_code"], name: "index_capacities_on_nursery_code"
   end
 
   create_table "nurseries", primary_key: "code", id: :integer, charset: "utf8mb4", collation: "utf8mb4_0900_ai_ci", force: :cascade do |t|
@@ -62,6 +49,6 @@ ActiveRecord::Schema.define(version: 2021_08_27_011539) do
     t.index ["latitude", "longitude"], name: "index_nurseries_on_latitude_and_longitude"
   end
 
-  add_foreign_key "borderlines", "nurseries", column: "nursery_school_code", primary_key: "code"
-  add_foreign_key "capacities", "nurseries", column: "nursery_school_code", primary_key: "code"
+  add_foreign_key "borderlines", "nurseries", column: "nursery_code", primary_key: "code"
+  add_foreign_key "capacities", "nurseries", column: "nursery_code", primary_key: "code"
 end
