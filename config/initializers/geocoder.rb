@@ -1,6 +1,6 @@
 Geocoder.configure(
   # Geocoding options
-  timeout: 3,                 # geocoding service timeout (secs)
+  timeout: 10,                 # geocoding service timeout (secs)
   lookup: :google,         # name of geocoding service (symbol)
   # ip_lookup: :ipinfo_io,      # name of IP address geocoding service (symbol)
   language: :ja,              # ISO-639 language code
@@ -14,7 +14,7 @@ Geocoder.configure(
   # Exceptions that should not be rescued by default
   # (if you want to implement custom error handling);
   # supports SocketError and Timeout::Error
-  # always_raise: [],
+  always_raise: [Timeout::Error],
 
   # Calculation options
   units: :km,                 # :km for kilometers or :mi for miles
