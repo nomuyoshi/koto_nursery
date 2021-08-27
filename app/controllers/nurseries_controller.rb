@@ -8,7 +8,7 @@ class NurseriesController < ApplicationController
   # POST /nurseries
   def search
     begin
-      @nurseries = Nursery.search(params[:kinds], params[:min_age_types], params[:address], params[:km])
+      @nurseries = Nursery.search(params[:kinds], params[:min_age_types], params[:address], params[:km].to_f)
     rescue Timeout::Error => e
       render json: { error: "timeout" }, status: :internal_server_error and return
    end
