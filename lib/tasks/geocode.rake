@@ -1,10 +1,10 @@
-namespace :nursery_school do
+namespace :geocode do
   desc "緯度・経度更新"
-  task :update_geocoding do
-    total = NurserySchool.count
+  task update: :environment do
+    total = Nursery.count
     progress = 0
 
-    NurserySchool.all.find_each(batch_size: 100) do |n|
+    Nursery.find_each(batch_size: 100) do |n|
       results = Geocoder.search(n.address)
       n.latitude = results.first.latitude
       n.longitude = results.first.longitude

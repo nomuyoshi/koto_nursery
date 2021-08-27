@@ -1,4 +1,4 @@
-class NurserySchool < ApplicationRecord
+class Nursery < ApplicationRecord
   self.primary_key = :code
   enum kind: {
     public: 0,        # 区立
