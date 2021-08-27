@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_08_21_150941) do
+ActiveRecord::Schema.define(version: 2021_08_27_011539) do
 
   create_table "borderlines", charset: "utf8mb4", collation: "utf8mb4_0900_ai_ci", force: :cascade do |t|
     t.integer "nursery_school_code", null: false
@@ -46,7 +46,7 @@ ActiveRecord::Schema.define(version: 2021_08_21_150941) do
     t.index ["nursery_school_code"], name: "fk_rails_e9fb57912b"
   end
 
-  create_table "nursery_schools", primary_key: "code", id: :integer, charset: "utf8mb4", collation: "utf8mb4_0900_ai_ci", force: :cascade do |t|
+  create_table "nurseries", primary_key: "code", id: :integer, charset: "utf8mb4", collation: "utf8mb4_0900_ai_ci", force: :cascade do |t|
     t.string "name", null: false
     t.string "address", null: false
     t.decimal "longitude", precision: 13, scale: 10
@@ -59,9 +59,9 @@ ActiveRecord::Schema.define(version: 2021_08_21_150941) do
     t.text "url"
     t.datetime "created_at", default: -> { "CURRENT_TIMESTAMP" }, null: false
     t.datetime "updated_at", default: -> { "CURRENT_TIMESTAMP" }, null: false
-    t.index ["latitude", "longitude"], name: "index_nursery_schools_on_latitude_and_longitude"
+    t.index ["latitude", "longitude"], name: "index_nurseries_on_latitude_and_longitude"
   end
 
-  add_foreign_key "borderlines", "nursery_schools", column: "nursery_school_code", primary_key: "code"
-  add_foreign_key "capacities", "nursery_schools", column: "nursery_school_code", primary_key: "code"
+  add_foreign_key "borderlines", "nurseries", column: "nursery_school_code", primary_key: "code"
+  add_foreign_key "capacities", "nurseries", column: "nursery_school_code", primary_key: "code"
 end
