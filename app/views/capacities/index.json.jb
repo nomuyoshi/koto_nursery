@@ -1,0 +1,5 @@
+json = @capacities.map do |capacity|
+  capacity.as_json.transform_keys { |k| k.camelize(:lower) }
+end
+
+json

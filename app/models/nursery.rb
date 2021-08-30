@@ -8,7 +8,7 @@ class Nursery < ApplicationRecord
     nintei_yo: 4,      # 認定こども園（幼保連携型）
     nintei_chi: 5,     # 認定こども園（地方裁量型）
   }, _prefix: true
-  enum min_acceptable_age_type: {
+  enum min_age_type: {
     fifty_seven_days: 0,
     four_months: 1,
     six_months: 2,
@@ -36,14 +36,14 @@ class Nursery < ApplicationRecord
 
 
   has_many :borderlines
-  has_one :capacity
+  has_many :capacities, foreign_key: :nursery_code
 
   geocoded_by :address
 
   def self.search(kinds, min_age_types, address, km = 1.0)
     result = self.all
     result = result.where(kind: kinds) if kinds.present?
-    result = result.where(min_acceptable_age_type: min_age_types) if min_age_types.present?
+    result = result.where(min_age_type: min_age_types) if min_age_types.present?
     result = result.near(address, km, unit: :km) if address.present?
 
     result
