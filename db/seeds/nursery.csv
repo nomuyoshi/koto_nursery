@@ -1,5 +1,5 @@
-code,name,kind,address,phone_number,min_acceptable_age_type,opening_type,overtime_condition_type,url
-200770,おはよう保育園清澄白河,private,東京都江東区清澄1-7-12,03-6240-3215,fifty_seven_days,b,zero_year_old_class,https://www.ttkids.co.jp/
+code,name,kind,address,phone_number,min_age_type,opening_type,overtime_condition_type,url
+200770,おはよう保育園 清澄白河,private,東京都江東区清澄1-7-12,03-6240-3215,fifty_seven_days,b,zero_year_old_class,https://www.ttkids.co.jp/
 200360,うぃず清澄白河駅前,private,東京都江東区清澄3-10-5,03-6458-5016,fifty_seven_days,d2,one_year_old,https://www.mom.ed.jp/hoikuen/t_kiyosumishirakawaekimae.html
 200910,ワーカーズコープ新大橋のびっこ（本園）,private,東京都江東区新大橋2-17-9,03-5625-2205,one_year,b,,https://so-nobikko.roukyou.gr.jp/
 200915,ワーカーズコープ新大橋のびっこ（分園）,private,東京都江東区新大橋3-16-4,03-6240-2670,three_years,b,,https://so-nobikko.roukyou.gr.jp/
@@ -51,7 +51,7 @@ code,name,kind,address,phone_number,min_acceptable_age_type,opening_type,overtim
 201180,タムスわんぱく保育園木場,private,東京都江東区木場2-13-17,03-5809-8510,one_year,a2,,https://kiba-hoikuen.tums.jp/
 200700,MIWA木場公園,private,東京都江東区木場4-1-65,03-5646-8355,fifty_seven_days,b2,zero_year_old_class,https://www.miwanokai.jp/kibakoen/
 200460,グレース,private,東京都江東区木場5-8-3,03-5245-6006,fifty_seven_days,d,one_year_old_class,http://www.gracehoikuen.com/top.html
-200625,スターチス（分園）　,private,東京都江東区木場5-11-15,03-5809-9969,three_years,b,,https://statice-ns.or.jp/?page_id=69
+200625,スターチス（分園）,private,東京都江東区木場5-11-15,03-5809-9969,three_years,b,,https://statice-ns.or.jp/?page_id=69
 200620,スターチス（本園）,private,東京都江東区東陽 3-27-32,03-6666-3883,four_months,b,one_year_old_class,https://statice-ns.or.jp/?page_id=67
 200970,さくらさくみらい 東陽二丁目,private,東京都江東区東陽2-4-8,03-6666-5739,one_year,b2,,https://www.sakura-39.jp/hoiku/toyo-nichome/
 200630,マミー保育園東陽町,private,東京都江東区東陽2-2-14,03‐3699‐8201,one_year,b2,,https://www.mommy-int.co.jp/nursery/toyocho/
@@ -61,20 +61,20 @@ code,name,kind,address,phone_number,min_acceptable_age_type,opening_type,overtim
 200980,さくらさくみらい 東陽町,private,東京都江東区東陽5-28-8,03-6666-6539,fifty_seven_days,b2,one_year_old_class,https://www.sakura-39.jp/hoiku/toyocho/
 220010,Kid's Patio 江東おひさま園,sho_a,東京都江東区東陽5-31-21,03-5606-8785,fifty_seven_days,f,one_year_old_class,https://www.kaede-kp.com/%E5%9C%92%E7%B4%B9%E4%BB%8B/%E3%81%8B%E3%81%88%E3%81%A7%E3%82%B0%E3%83%AB%E3%83%BC%E3%83%97%E3%81%AE%E4%BF%9D%E8%82%B2%E5%9C%92/kid-s-patio%E6%B1%9F%E6%9D%B1%E3%81%8A%E3%81%B2%E3%81%95%E3%81%BE%E5%9C%92/
 100460,塩浜,public_private,東京都江東区塩浜1-3-10,03-3647-0480,fifty_seven_days,b2,one_year_old_class,http://shiohama.ncf-kids.com/
-200420,聖華しおかぜ,private,東京都江東区塩浜1-4-46,03-5632-8771,fifty_seven_days,b2,one_year_old,https://seika-group.com/shiokaze/
+200420,聖華しおかぜ,private,東京都江東区塩浜1-4-46,03-5632-8771,fifty_seven_days,b2,one_year_old,https://seika-group.com/shiokaze/
 100060,塩崎,public,東京都江東区塩浜2-6-3,03-3645-6014,fifty_seven_days,b,one_year_old_class,https://www.city.koto.lg.jp/280314/kodomo/hoiku/kuritsu/shiozakihoiku.html
-200830,LIFE SCHOOL塩浜こどものいえ,private,東京都江東区塩浜2-6-2,03-6666-5444,fifty_seven_days,b2,one_year_old,https://lifeschool.jp/publics/index/107/
-201150,キッズスマイル江東塩浜,private,東京都江東区塩浜2-14-5,03-6458-7637,one_year,b2,,https://www.kidsgarden.co.jp/nursery/guide/kotoshiohama/
+200830,LIFE SCHOOL塩浜こどものいえ,private,東京都江東区塩浜2-6-2,03-6666-5444,fifty_seven_days,b2,one_year_old,https://lifeschool.jp/publics/index/107/
+201150,キッズスマイル江東塩浜,private,東京都江東区塩浜2-14-5,03-6458-7637,one_year,b2,,https://www.kidsgarden.co.jp/nursery/guide/kotoshiohama/
 200040,深川愛隣,private,東京都江東区枝川2-25-10,03-3645-9900,one_year,a,,https://www.airin-gakuen.com/blank
 200220,愛隣シャローム,private,東京都江東区枝川3-6-15,03-3645-5858,fifty_seven_days,a2,one_year_old_class,https://www.airin-gakuen.com/blank-1
 200190,シンフォニア,private,東京都江東区豊洲2-5-3,03-5547-0083,fifty_seven_days,a2,zero_year_old_class,https://www.miwanokai.jp/sinfonia/about/about.html
-200570,TKチルドレンズファーム豊洲校,private,東京都江東区豊洲3-4-8,03-6802-7081,fifty_seven_days,b2,zero_year_old_class,https://www.tk-farm.com/
-200690,TKチルドレンズファーム豊洲第二校,private,東京都江東区豊洲3-4-8,03-5547-4431,fifty_seven_days,b2,zero_year_old_class,https://www.tk-farm.com/
+200570,TKチルドレンズファーム豊洲校,private,東京都江東区豊洲3-4-8,03-6802-7081,fifty_seven_days,b2,zero_year_old_class,https://www.tk-farm.com/
+200690,TKチルドレンズファーム豊洲第二校,private,東京都江東区豊洲3-4-8,03-5547-4431,fifty_seven_days,b2,zero_year_old_class,https://www.tk-farm.com/
 200160,蓮美幼児学園とよすナーサリー,private,東京都江東区豊洲3-5-21,03-3534-4152,fifty_seven_days,d2,zero_year_old_class,https://renbi.com/toyosu
 200230,蓮美幼児学園第2とよすナーサリー,private,東京都江東区豊洲3-5-3,03-3532-4152,one_year,d2,,https://renbi.com/toyosu2
 200520,アスク豊洲,private,東京都江東区豊洲3-6-8,03-5560-0220,fifty_seven_days,b2,zero_year_old_class,https://www.nihonhoiku.co.jp/blog/toyosu/
 200990,さくらさくみらい 豊洲,private,東京都江東区豊洲4-1-8,03-6204-9239,fifty_seven_days,b2,one_year_old_class,https://www.sakura-39.jp/hoiku/toyosu/
-200340,日生豊洲駅前保育園ひびき,private,東京都江東区豊洲4-1-24,03-6204-9771,fifty_seven_days,b2,zero_year_old_class,https://www.merhalsa.jp/hoikuen/nursery/toyosu-ekimae/
+200340,日生豊洲駅前保育園ひびき,private,東京都江東区豊洲4-1-24,03-6204-9771,fifty_seven_days,b2,zero_year_old_class,https://www.merhalsa.jp/hoikuen/nursery/toyosu-ekimae/
 100430,豊洲,public_private,東京都江東区豊洲4-8-12,03-3533-5427,fifty_seven_days,b2,one_year_old,http://www.toyosuhoikuen.net/
 200180,ゆらりん豊四,private,東京都江東区豊洲4-10-1-106,03-3532-1044,fifty_seven_days,b2,zero_year_old_class,https://hoiku.lifesupport.co.jp/yurarin-toyoyon/
 210010,おうち保育園とよす,sho_a,東京都江東区豊洲4-10-4-106,03-5534-8824,fifty_seven_days,b,one_year_old_class,https://mirai.florence.or.jp/ouchi/toyosu/
@@ -96,7 +96,7 @@ code,name,kind,address,phone_number,min_acceptable_age_type,opening_type,overtim
 205010,しののめYMCAこども園,nintei_yo,東京都江東区東雲1-9-46,03-5547-5388,fifty_seven_days,a2,one_year_old_class,http://tokyo.ymca.or.jp/childcare/shinonome/
 200330,東雲キャナルコート ナーサリースクール,private,東京都江東区東雲1-9-51,03-5859-5547,fifty_seven_days,d2,one_year_old,http://scns.tksg.ed.jp/
 201000,グローバルキッズしののめ園,private,東京都江東区東雲1-10-14,03-3520-8310,one_year,b2,,https://www.gkids.co.jp/facilities/nursery_168.html
-200590,みんなのみらいをつくる 保育園東雲,private,東京都江東区東雲2-1-22,03-6380-7421,fifty_seven_days,a2,one_year_old_class,https://mirai.florence.or.jp/minnanomirai/shinonome/
+200590,みんなのみらいをつくる保育園 東雲,private,東京都江東区東雲2-1-22,03-6380-7421,fifty_seven_days,a2,one_year_old_class,https://mirai.florence.or.jp/minnanomirai/shinonome/
 200260,ナーサリールームベリーベアー東雲,private,東京都江東区東雲2-3-17,03-3527-7905,fifty_seven_days,b2,one_year_old_class,https://ness-corpo.co.jp/nursery/shinonome/
 100090,東雲第二,public,東京都江東区東雲2-4-4,03-3529-1453,one_year,b,,https://www.city.koto.lg.jp/280316/kodomo/hoiku/kuritsu/shinonomedainihoiku.html
 201160,みらいく有明園,private,東京都江東区有明1-2-12,03-6457-1251,one_year,a2,,https://www.miraiku-h.co.jp/nursery/ariake/
@@ -122,11 +122,11 @@ code,name,kind,address,phone_number,min_acceptable_age_type,opening_type,overtim
 200280,アンジェリカ亀戸,private,東京都江東区亀戸4-13-18,03-5628-6250,fifty_seven_days,a2,zero_year_old_class,https://www.angelica-nsy.net/facilities/kameid/
 100480,亀戸第四,public_private,東京都江東区亀戸4-21-13,03-5858-8893,fifty_seven_days,b2,one_year_old_class,http://www.milkywaygroup.org/intro/en03.html
 200470,グローバルキッズ亀戸園,private,東京都江東区亀戸5-1-15,03-3684-5020,fifty_seven_days,b2,zero_year_old_class,https://www.gkids.co.jp/facilities/nursery_062.html
-210140,サンライズキッズ保育園　亀戸園,sho_a,東京都江東区亀戸5-29-19,050-5807-2311,one_year,d,,https://www.sunrisekids-hoikuen.com/kameido/
+210140,サンライズキッズ保育園 亀戸園,sho_a,東京都江東区亀戸5-29-19,050-5807-2311,one_year,d,,https://www.sunrisekids-hoikuen.com/kameido/
 200310,コビープリスクールかめいど,private,東京都江東区亀戸6-53-11,03-5858-6277,fifty_seven_days,b2,zero_year_old_class,https://www.coby.jp/institute/kameido/
 100150,亀戸,public,東京都江東区亀戸6-54-2,03-3682-9546,one_year,b,,https://www.city.koto.lg.jp/280320/kodomo/hoiku/kuritsu/kameidohoiku.html
 200860,こころこうとう,private,東京都江東区亀戸6-42-13,03-5875-1770,fifty_seven_days,d2,one_year_old,https://cocoro-fukushikai.or.jp/lists/%e3%81%93%e3%81%93%e3%82%8d%e3%81%93%e3%81%86%e3%81%a8%e3%81%86%e4%bf%9d%e8%82%b2%e5%9c%92%e8%aa%8d%e5%8f%af%e4%bf%9d%e8%82%b2%e6%89%80-2/
-200530,まなびの森保育園亀戸,private,東京都江東区亀戸7-10-1,03-3638-5500,fifty_seven_days,b2,zero_year_old_class,http://kodomonomori.co.jp/d2/
+200530,まなびの森保育園 亀戸,private,東京都江東区亀戸7-10-1,03-3638-5500,fifty_seven_days,b2,zero_year_old_class,http://kodomonomori.co.jp/d2/
 200920,保育園ミルキーウェイ亀戸園,private,東京都江東区亀戸7-38-12,03-5858-8206,fifty_seven_days,b2,one_year_old,http://www.milkywaygroup.org/intro/en14.html
 100160,亀戸第二,public,東京都江東区亀戸7-41-16,03-3684-4386,one_year,b,,https://www.city.koto.lg.jp/280321/kodomo/hoiku/kuritsu/kameidodainihoiku.html
 200255,亀戸こころ（分園）,private,東京都江東区亀戸7-63-3,03-5609-7272,fifty_seven_days,b2,one_year_old_class,https://tokyojidokyokai.com/contents/Facility/kameido-sub/
