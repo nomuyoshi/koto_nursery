@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_08_27_013918) do
+ActiveRecord::Schema.define(version: 2021_08_28_120439) do
 
   create_table "borderlines", charset: "utf8mb4", collation: "utf8mb4_0900_ai_ci", force: :cascade do |t|
     t.integer "nursery_code", null: false
@@ -26,7 +26,7 @@ ActiveRecord::Schema.define(version: 2021_08_27_013918) do
   create_table "capacities", charset: "utf8mb4", collation: "utf8mb4_0900_ai_ci", force: :cascade do |t|
     t.integer "nursery_code", null: false
     t.integer "age", null: false
-    t.integer "max_number", null: false
+    t.integer "num", null: false
     t.datetime "created_at", default: -> { "CURRENT_TIMESTAMP" }, null: false
     t.datetime "updated_at", default: -> { "CURRENT_TIMESTAMP" }, null: false
     t.index ["age", "nursery_code"], name: "index_capacities_on_age_and_nursery_code", unique: true
@@ -40,7 +40,7 @@ ActiveRecord::Schema.define(version: 2021_08_27_013918) do
     t.decimal "latitude", precision: 13, scale: 10
     t.string "phone_number", null: false
     t.integer "kind", default: 0, null: false
-    t.integer "min_acceptable_age_type", null: false
+    t.integer "min_age_type", null: false
     t.integer "opening_type", null: false
     t.integer "overtime_condition_type"
     t.text "url"
