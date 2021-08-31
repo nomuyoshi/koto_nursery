@@ -10,13 +10,15 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_08_28_120439) do
+ActiveRecord::Schema.define(version: 2021_08_31_045944) do
 
   create_table "borderlines", charset: "utf8mb4", collation: "utf8mb4_0900_ai_ci", force: :cascade do |t|
     t.integer "nursery_code", null: false
     t.integer "age", null: false
     t.boolean "priority_order", null: false
     t.integer "point"
+    t.boolean "less_capacity", default: false, null: false
+    t.boolean "undisclosed", default: false, null: false
     t.integer "year", null: false
     t.datetime "created_at", default: -> { "CURRENT_TIMESTAMP" }, null: false
     t.datetime "updated_at", default: -> { "CURRENT_TIMESTAMP" }, null: false
