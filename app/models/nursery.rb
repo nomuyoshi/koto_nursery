@@ -8,6 +8,9 @@ class Nursery < ApplicationRecord
     nintei_yo: 4,      # 認定こども園（幼保連携型）
     nintei_chi: 5,     # 認定こども園（地方裁量型）
   }, _prefix: true
+
+  # TODO: enumではなくintで月齢を入れる
+  # 生後57日〜を生後2ヶ月から入園というのが一般的。
   enum min_age_type: {
     fifty_seven_days: 0,
     four_months: 1,
@@ -43,9 +46,16 @@ class Nursery < ApplicationRecord
   def self.search(kinds, min_age_type, address, km = 1.0)
     result = self.all
     result = result.where(kind: kinds) if kinds.present?
-    result = result.where(min_age_type: min_age_type) if min_age_type.present?
+    result = result.where(min_age_type: self.under_age_types(min_age_type)) if min_age_type.present?
     result = result.near(address, km, unit: :km) if address.present?
 
     result
+  end
+
+  def self.under_age_types(min_age_type)
+    reference_value = min_age_types[min_age_type]
+
+    under_age_types = min_age_types.filter { |_, v| reference_value >= v }
+    under_age_types.keys
   end
 end
