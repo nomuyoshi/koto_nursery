@@ -1,7 +1,0 @@
-json = @nurseries.map do |nursery|
-  capacity = nursery.capacities.inject(0) { |sum, c| sum + c.num }
-  hash = nursery.as_json.merge({"capacity" => capacity})
-  hash.transform_keys { |k| k.camelize(:lower) }
-end
-
-json

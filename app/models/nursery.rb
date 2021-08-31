@@ -40,10 +40,10 @@ class Nursery < ApplicationRecord
 
   geocoded_by :address
 
-  def self.search(kinds, min_age_types, address, km = 1.0)
+  def self.search(kinds, min_age_type, address, km = 1.0)
     result = self.all
     result = result.where(kind: kinds) if kinds.present?
-    result = result.where(min_age_type: min_age_types) if min_age_types.present?
+    result = result.where(min_age_type: min_age_type) if min_age_type.present?
     result = result.near(address, km, unit: :km) if address.present?
 
     result

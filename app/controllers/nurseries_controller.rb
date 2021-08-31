@@ -8,6 +8,8 @@ class NurseriesController < ApplicationController
   # POST /nurseries
   def search
     begin
+      Rails.logger.debug("snakelize_params")
+      Rails.logger.debug("#{snakelize_params[:kinds]}, #{snakelize_params[:min_age_type]}, #{snakelize_params[:address]}, #{snakelize_params[:km].to_f}")
       @nurseries = Nursery.includes(:capacities).
                      search(snakelize_params[:kinds], snakelize_params[:min_age_type], snakelize_params[:address], snakelize_params[:km].to_f).
                      order(:address)
