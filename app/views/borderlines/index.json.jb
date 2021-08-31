@@ -1,0 +1,5 @@
+json = @borderlines.map do |borderline|
+  borderline.as_json.transform_keys { |k| k.camelize(:lower) }
+end
+
+json
