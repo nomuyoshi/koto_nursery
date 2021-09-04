@@ -5,7 +5,7 @@
 
 # Read more: https://github.com/cyu/rack-cors
 
-allow_origins = Rails.env.production? ? "example.com" : "localhost:3001"
+allow_origins = Rails.env.production? ? "koto-nursery.com" : "localhost:3001"
 
 Rails.application.config.middleware.insert_before 0, Rack::Cors do
   allow do
